@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv bashio
+
+bashio::log.info "Starting remote Bike python script..."
+
+export URL
+bashio::addon.ingress_entry
+URL=$(bashio::addon.ingress_entry)
+echo $URL
+
+python3 /config/scripts/bike_remote_speed/my_server.py
+
+bashio::log.info "Python remote Bike script over, go to finish"
+
+bashio::log.info "By the way, we should not have come here..."

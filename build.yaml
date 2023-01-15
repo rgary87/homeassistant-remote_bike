@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+build_from:
+  armv7: ghcr.io/home-assistant/armv7-base:3.16
+  aarch64: ghcr.io/home-assistant/aarch64-base:3.16

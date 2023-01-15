@@ -1,0 +1,20 @@
+name: "Bike Data"
+description: "I wanna discuss with you wirelesslyyyy"
+version: "0.0.2"
+slug: "bike_and_wifi"
+arch:
+  - aarch64
+  - armv7
+apparmor: false
+init: false
+map:
+  - config:rw
+options:
+  log_level: info
+schema: 
+  log_level: list(trace|debug|info|notice|warning|error|fatal)
+ports:
+  8099/tcp: 8099
+ingress: true
+webui: http://[HOST]:[PORT:8099]
+panel_icon: mdi:bike
